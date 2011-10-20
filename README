@@ -1,0 +1,51 @@
+Syntax:
+; There are three types of comment markers.
+# These two...
+// And this one
+
+option_name : option_value    #Values are accessed vi pif.option_name.
+another_name = another_value   #Both : and = can be used for association.
+
+[Section]    ;Sections are accessed via pif.Section (In-line comment, btw).
+sect_opt: value    #Section values are accessed via pif.Section.sect_opt.
+
+[Section.Sub_Sect]    //Sub-Sections are accessed via pif.Section.Sub_Sect.
+option_name: Secondary value    #There won't be namespace collision here.
+
+[Number]
+int: 4
+float: 0.2 #The syntax `.2` works fine, but `4.` doesn't.
+scientific: 2.3e9 #e-9 also works.
+binary: 0b11011010
+hexadecimal: 0x12AF
+hex_sci: 0x1.fp-6
+
+[Strings]
+implicit_string: implicit strings will be evaluated into a single strings
+explicit_string: 'These use Pythonic conventions and give us much more freedom.'
+quoted_string: "Both ticks(') and quotes work on these!"
+newline_string: """Triple ticks and triple quotes are accepted too!
+                    You can have newlines and tabs in 'em."""
+
+		    [Math]
+		    add: 4 + 2 #6
+		    multiply: 6 * 2.4 #14.4
+		    floor_divide: 9 // 4 #2
+		    continuation: 4 + 
+		                    2 * 6  #18. Notice that the order of Operations is maintained.
+				    #We can't do parenthetical math yet. Sorry!
+
+				    [Lists]
+				    list: [anything, """can""", "go", 'here']
+				    nested: [lists, [can, be, [nested]]]
+				    semicolons: [elements; can; be; separated; with; semicolons]
+				    empty: []
+
+				    [Tuples]
+				    tuple: (anything, """can""", "go", 'here', 4 + 2)
+				    nested: (lists, (can, be, (nested)))
+				    empty: ( )
+
+				    [Dicts]
+				    dict: {'key': value, 4= 'more values'}
+				    empty { }
