@@ -1,5 +1,5 @@
-TODO: Figure out the General Use... thing.
-TODO: So python doesn't like the `p` or the `.` in its hex numbers. Make sure you know what kind of syntax is going to be keen with this system.
+TODO: Figure out the General Use... thing.  
+TODO: So python doesn't like the `p` or the `.` in its hex numbers. Make sure you know what kind of syntax is going to be keen with this system.  
 TODO: Double check the comment system, and then add in that block quote stuff.
 
 ## General Use
